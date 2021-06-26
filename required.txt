@@ -1,0 +1,4 @@
+Create a geolocation app to show the location of the computer running the code.
+The solution should reveil the latitude and the longitude of the current location as well as an indicator of how accurate that location is, expressed as a radius from the reveiled latitude and the longitude measured in Kms.
+- libcurl
+- Google maps API
