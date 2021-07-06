@@ -1,10 +1,5 @@
 #include "response.h"
 
-#include <jsoncons/json.hpp>
-#include <sstream>
-#include <iostream>
-#include <iomanip>
-
 using namespace jsoncons;
 
 Response::Response(string ResHeader, string ResBody)
@@ -24,12 +19,4 @@ Response::Response(string ResHeader, string ResBody)
     iRadius = jResBody["accuracy"].as<double>() / 1000; // Google API responds in meters
     iLng = jResBody["location"]["lng"].as<double>();
     iLat = jResBody["location"]["lat"].as<double>();
-    cout << setprecision(7) << fixed;
-    cout << "Latitude: " << iLat << endl;
-    cout << "Longitude: " << iLng << endl;
-    cout << setprecision(2) << fixed;
-    cout << "Radius: " << iRadius << " Kms"<< endl;
-    cout << "Check your location on Google MAPS, copy this to your browser : " << endl;
-    cout << setprecision(7) << fixed;
-    cout << "google.com/maps/@" << iLat << ',' << iLng << ",13z" << endl;
 }

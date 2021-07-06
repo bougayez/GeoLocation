@@ -1,10 +1,13 @@
 #include <string>
+#include <jsoncons/json.hpp>
+#include <sstream>
+#include <iostream>
 
 using namespace std;
 
 class Response
 {
-private:
+public:
     string sHeader;
     string sBody;
     string sResType;
@@ -13,7 +16,6 @@ private:
     double iLat = 0;
     double iLng = 0;
     double iRadius = 0;
-public:
     Response();
     Response(string, string);
 };
